@@ -126,7 +126,7 @@ local config = {
   -- indent-o-matic config
   ["indent-o-matic"] = {
     max_lines = 2048,
-    standard_widths = { 4, 8 },
+    standard_widths = { 2, 4, 8 },
   },
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -239,6 +239,8 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
+        {"puremourning/vimspector"},
+        {"mfussenegger/nvim-dap"},
         {
           "catppuccin/nvim",
           as = "catppuccin",
@@ -275,10 +277,20 @@ local config = {
     -- use mason-lspconfig to configure LSP installations
     ["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
       -- ensure_installed = { "sumneko_lua" },
+      ensure_installed = {
+        "golangci_lint_ls",
+        "gopls",
+        "rust_analyzer",
+      },
     },
     -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
     ["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
       -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = {
+          "clang-format",
+          "gofumpt",
+          "prettier"
+      },
     },
   },
 
