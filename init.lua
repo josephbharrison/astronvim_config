@@ -25,8 +25,9 @@ local config = {
     -- },
   },
 
-  -- Set colorscheme to use
-  colorscheme = "default_theme",
+  -- -- Set colorscheme to use
+  -- colorscheme = "default_theme",
+  colorscheme = "ayu-mirage",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -126,6 +127,12 @@ local config = {
       vimwiki = false,
       ["which-key"] = true,
     },
+  },
+
+  -- indent-o-matic config
+  ["indent-o-matic"] = {
+    max_lines = 2048,
+    standard_widths = { 4, 8 },
   },
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
